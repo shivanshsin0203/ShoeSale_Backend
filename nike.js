@@ -1,4 +1,4 @@
-const popularsales = {
+const product = {
   title: "nike",
   items: [
     {
@@ -179,4 +179,4 @@ const popularsales = {
     },
   ],
 };
-module.exports = popularsales;
+module.exports = product;
