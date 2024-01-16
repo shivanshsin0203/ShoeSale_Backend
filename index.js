@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.get("/test", (req, res) => {
-    res.json({data:puma});
+    res.json({data:adidas});
     });
 app.listen(port, () => {
   console.log(`Server listening at port: ${port}`);
