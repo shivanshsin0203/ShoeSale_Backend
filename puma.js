@@ -1,5 +1,5 @@
 const product = {
-    title: "puma",
+    title: "Puma",
     items: [
       {
         id: "0p0x1",
