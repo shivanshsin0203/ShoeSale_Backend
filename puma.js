@@ -64,8 +64,8 @@ const product = {
         btn: "Buy Now",
         img: "/assets/pu6.png",
         price: "210",
-        color: "from-red-400 to-red-700",
-        shadow: "shadow-lg shadow-red-500",
+        color: "from-red-500 to-rose-500",
+        shadow: "shadow-lg shadow-rose-500",
       },
       {
         id: "0p0x7",
