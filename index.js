@@ -6,15 +6,17 @@ const app = express();
 const port = 3005;
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const stripe = require("stripe")("sk_test_51OZVowSBfIgpwKKIlxkdSlXGJ7Ibs2thzqpo2zN5jh38cPA7e8IHI3eNxDDG4Wvfr0419CcgqLD0SKH76PvNy1nL00YKnVq4W2");
+const dotenv = require("dotenv");
+const paymentRoutes = require("./Routes/payment");
+
+
+dotenv.config();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true,
-}));
+app.use(cors());
 
+app.use("/api/payment/", paymentRoutes);
 
 app.get("/initial", (req, res) => {
   res.json({ data: adidas });
