@@ -1,5 +1,6 @@
 const express = require("express");
 const nike = require("./nike");
+const path = require("path");
 const adidas = require("./addidas");
 const puma = require("./puma");
 const app = express();
@@ -17,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 app.use("/api/payment/", paymentRoutes);
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/initial", (req, res) => {
   res.json({ data: adidas });
