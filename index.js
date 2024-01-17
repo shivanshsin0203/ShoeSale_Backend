@@ -10,7 +10,11 @@ const stripe = require("stripe")("sk_test_51OZVowSBfIgpwKKIlxkdSlXGJ7Ibs2thzqpo2
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+}));
+
 
 app.get("/initial", (req, res) => {
   res.json({ data: adidas });
